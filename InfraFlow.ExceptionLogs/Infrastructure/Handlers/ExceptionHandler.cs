@@ -1,4 +1,4 @@
-﻿using InfraFlow.ExceptionLogs.Core.Types;
+﻿using InfraFlow.Domain.Core.Exceptions;
 
 namespace InfraFlow.ExceptionLogs.Infrastructure.Handlers;
 

@@ -1,5 +1,5 @@
+using InfraFlow.Domain.Core.Exceptions;
 using InfraFlow.ExceptionLogs.Core.Extensions;
-using InfraFlow.ExceptionLogs.Core.Types;
 using InfraFlow.ExceptionLogs.Infrastructure.HttpProblemDetails;
 using Microsoft.AspNetCore.Http;
 

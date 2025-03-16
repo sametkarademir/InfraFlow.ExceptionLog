@@ -1,6 +1,6 @@
 using AutoMapper;
+using InfraFlow.Domain.Core.Exceptions;
 using InfraFlow.EntityFramework.Core.Models;
-using InfraFlow.ExceptionLogs.Core.Types;
 using InfraFlow.ExceptionLogs.Infrastructure.DTOs.AppExceptionLogs;
 
 namespace InfraFlow.ExceptionLogs.Infrastructure.Profiles;

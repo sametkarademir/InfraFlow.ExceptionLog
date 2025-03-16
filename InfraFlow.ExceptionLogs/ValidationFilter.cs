@@ -1,7 +1,5 @@
 using FluentValidation;
-using InfraFlow.ExceptionLogs.Core.Models;
-using InfraFlow.ExceptionLogs.Core.Types;
-using Microsoft.AspNetCore.Mvc;
+using InfraFlow.Domain.Core.Exceptions;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 

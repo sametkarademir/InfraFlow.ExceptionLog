@@ -19,7 +19,7 @@ public class FileLogSink : ILogSink
         }
     }
 
-    public void Write(LogEntry logEntry)
+    public async Task Write(LogEntry logEntry)
     {
         string logFileName = Path.Combine(_logDirectory, $"{DateTime.UtcNow:yyyy-MM-dd}.log");
 
@@ -53,5 +53,7 @@ public class FileLogSink : ILogSink
         logBuilder.AppendLine("--------------------------------------------------");
         
         File.AppendAllText(logFileName, logBuilder.ToString() + Environment.NewLine);
+        
+        await Task.CompletedTask;
     }
 }

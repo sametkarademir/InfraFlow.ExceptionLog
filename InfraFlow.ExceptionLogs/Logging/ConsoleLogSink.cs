@@ -5,7 +5,7 @@ namespace InfraFlow.ExceptionLogs.Logging;
 
 public class ConsoleLogSink : ILogSink
 {
-    public void Write(LogEntry logEntry)
+    public async Task Write(LogEntry logEntry)
     {
         Console.ForegroundColor = GetColorForLogLevel(logEntry.Level);
 
@@ -33,6 +33,8 @@ public class ConsoleLogSink : ILogSink
         }
 
         Console.ResetColor();
+        
+        await Task.CompletedTask;
     }
     
     private ConsoleColor GetColorForLogLevel(AppLogLevel level)

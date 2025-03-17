@@ -7,7 +7,7 @@ public class GetListAppExceptionLogRequestDto
     public Guid? CorrelationId { get; set; }
     public Guid? AppSnapshotId { get; set; }
     public Guid? SessionId { get; set; }
-
+    
     public int PageIndex { get; set; } = 0;
     public int PageSize { get; set; } = 25;
 

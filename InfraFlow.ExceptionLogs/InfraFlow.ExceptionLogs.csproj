@@ -11,20 +11,20 @@
         <RepositoryUrl>https://github.com/sametkarademir/InfraFlow</RepositoryUrl>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
     </PropertyGroup>
-
-    <ItemGroup>
-        <None Update="readme.md">
-            <Pack>true</Pack>
-            <PackagePath>/</PackagePath>
-        </None>
-    </ItemGroup>
     
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
         <PackageReference Include="InfraFlow.Domain.Core" Version="0.1.2" />
         <PackageReference Include="InfraFlow.EntityFramework.Core" Version="0.1.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <None Update="readme.md">
+        <Pack>true</Pack>
+        <PackagePath>/</PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

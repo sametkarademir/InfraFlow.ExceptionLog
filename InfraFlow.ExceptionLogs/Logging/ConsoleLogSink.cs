@@ -1,9 +1,9 @@
-using InfraFlow.ExceptionLogs.Core.Models;
 using InfraFlow.ExceptionLogs.Domain.Enums;
+using InfraFlow.ExceptionLogs.Domain.Models;
 
-namespace InfraFlow.ExceptionLogs.Infrastructure.Logging;
+namespace InfraFlow.ExceptionLogs.Logging;
 
-public class ConsoleOutput : ILogSink
+public class ConsoleLogSink : ILogSink
 {
     public void Write(LogEntry logEntry)
     {
@@ -49,3 +49,4 @@ public class ConsoleOutput : ILogSink
         };
     }
 }
+

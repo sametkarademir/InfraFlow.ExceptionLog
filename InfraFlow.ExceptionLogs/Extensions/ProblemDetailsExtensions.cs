@@ -1,7 +1,7 @@
 using System.Text.Json;
-using InfraFlow.ExceptionLogs.Infrastructure.HttpProblemDetails;
+using InfraFlow.ExceptionLogs.HttpProblemDetails;
 
-namespace InfraFlow.ExceptionLogs.Core.Extensions;
+namespace InfraFlow.ExceptionLogs.Extensions;
 
 public static class ProblemDetailsExtensions
 {

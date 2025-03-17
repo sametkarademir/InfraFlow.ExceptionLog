@@ -1,6 +1,6 @@
 using System.Net.Mime;
-using InfraFlow.ExceptionLogs.Infrastructure.Handlers;
-using InfraFlow.ExceptionLogs.Infrastructure.Logging;
+using InfraFlow.ExceptionLogs.Handlers;
+using InfraFlow.ExceptionLogs.Logging;
 using Microsoft.AspNetCore.Http;
 
 namespace InfraFlow.ExceptionLogs.DependencyInjection;
@@ -18,7 +18,7 @@ public class ExceptionMiddleware(RequestDelegate next, IAppLogger<ExceptionMiddl
         catch (Exception exception)
         {
             await HandleExceptionAsync(context.Response, exception);
-            await appLogger.LogErrorAsync(exception.Message, exception);
+            appLogger.LogError(exception.Message, exception);
         }
     }
     

@@ -1,15 +1,17 @@
 using System.Text;
-using InfraFlow.ExceptionLogs.Core.Models;
+using InfraFlow.ExceptionLogs.Configurations;
+using InfraFlow.ExceptionLogs.Domain.Models;
+using Microsoft.Extensions.Options;
 
-namespace InfraFlow.ExceptionLogs.Infrastructure.Logging;
+namespace InfraFlow.ExceptionLogs.Logging;
 
-public class FileOutput : ILogSink
+public class FileLogSink : ILogSink
 {
     private readonly string _logDirectory;
 
-    public FileOutput(string logDirectory)
+    public FileLogSink(IOptions<ExceptionFlowOptions> options)
     {
-        _logDirectory = logDirectory;
+        _logDirectory = options.Value.LogDirectory;
         
         if (!Directory.Exists(_logDirectory))
         {
